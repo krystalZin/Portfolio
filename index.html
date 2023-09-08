@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krystal's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="public/logo_trans.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#E6D0CA] font-sans">
+    <nav class="bg-[#313035] p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-[#F38AA5] text-lg italic">Krystal</a>
+            <ul class="hidden desktop-menu lg:flex space-x-7">
+                <li><a href="about.html" class="text-white hover:text-[#F38AA5]">About Me</a></li>
+                <li><a href="projects.html" class="text-white hover:text-[#F38AA5]">Projects</a></li>
+                <li><a href="contact.html" class="text-white hover:text-[#F38AA5]">Contact</a></li>
+            </ul>
+            <div class="lg:hidden">
+                <div id="menu-wrapper" class="relative">
+                    <button id="menu-toggle" class="text-white hover:text-gray-700">☰</button>
+                    <div class="mobile-menu hidden" id="mobile-menu">
+                        <ul>
+                            <li><a href="about.html" class="text-white hover:text-[#F38AA5]">About Me</a></li>
+                            <li><a href="projects.html" class="text-white hover:text-[#F38AA5]">Projects</a></li>
+                            <li><a href="contact.html" class="text-white hover:text-[#F38AA5]">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="min-h-screen">
+        <header class="bg-white text-black py-20">
+            <div class="container mx-auto header-container flex flex-col lg:flex-row items-center text-center lg:text-left">
+                <div class="header-content px-5">
+                    <h1 class="text-2xl font-semibold mb-3">Ngu Eain (Krystal) Zin</h1> 
+                    <p class="text-lg mb-1">Computer Science Student at TMU</p>
+                    <p class="bg-gray-900 text-white rounded-lg text-m font-sans px-5 py-2 inline-block">Toronto, ON</p>
+                </div>
+                <img src="public/profile1.jpg" alt="Profile Picture" class="profile-image mr-3 rounded-lg lg:max-w-[200px] lg:ml-20" width="200px"> 
+            </div>
+        </header>
+        
+        <section class="container mx-auto py-10">
+            <h2 class="text-2xl font-semibold mb-6 text-center">Articles</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <a href="https://www.github.com" target="_blank" class="bg-white rounded-lg hover:bg-stone-500 shadow-lg p-6">
+                    <h3 class="text-xl font-semibold">Article 1</h3>
+                    <p>Click to view Article</p>
+                </a>
+        
+                <a href="https://www.facebook.com" target="_blank" bg-white rounded-lg hover:bg-stone-500 shadow-lg p-6">
+                    <h3 class="text-xl font-semibold">Article 2</h3>
+                    <p>Click to view Article</p>
+                </a>
+        
+                <a href="https://www.linkedin.com" target="_blank" bg-white rounded-lg hover:bg-stone-500 shadow-lg p-6">
+                    <h3 class="text-xl font-semibold">Article 3</h3>
+                    <p>Click to view Article</p>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <footer class="bg-gray-900 text-white py-5">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 Krystal's Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuToggle.addEventListener("click", () => {
+            mobileMenu.classList.toggle("fullscreen"); 
+        });
+
+        document.addEventListener("click", function (event) {
+            if (mobileMenu.classList.contains("fullscreen") && event.target !== menuToggle) {
+                mobileMenu.classList.remove("fullscreen");
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+ 
