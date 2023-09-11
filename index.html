@@ -33,13 +33,13 @@
     </nav>
     <div class="min-h-screen">
         <header class="bg-white text-black py-20">
-            <div class="container mx-auto header-container flex flex-col lg:flex-row items-center text-center lg:text-left">
-                <div class="header-content px-5">
+            <div class="container mx-auto header-container flex flex-col lg:flex-row items-center justify-center lg:text-left">
+                <div class="header-content px-5 text-center lg:text-left">
                     <h1 class="text-2xl font-semibold mb-3">Ngu Eain (Krystal) Zin</h1>
                     <p class="text-lg mb-1">Computer Science Student at TMU</p>
-                    <p class="bg-gray-900 text-white rounded-lg text-m font-sans px-5 py-2 inline-block">Toronto, ON</p>
+                    <p class="text-lg mb-1">Toronto, ON</p>
                 </div>
-                <img src="public/profile.jpg" alt="Profile Picture" class="profile-image mr-3 rounded-lg lg:max-w-[200px] lg:ml-20" width="200px">
+                <img src="public/profile.jpg" alt="Profile Picture" class="profile-image ml-3 rounded-lg lg:max-w-[200px]" width="200px">
             </div>
         </header>
         <section class="container mx-auto py-10">
@@ -69,8 +69,10 @@
     <script>
         const menuToggle = document.getElementById("menu-toggle");
         const mobileMenu = document.getElementById("mobile-menu");
-
-        menuToggle.addEventListener("click", () => {
+    
+        menuToggle.addEventListener("click", toggleMobileMenu);
+    
+        function toggleMobileMenu() {
             if (mobileMenu.style.display === "block") {
                 mobileMenu.style.display = "none";
             } else {
@@ -80,20 +82,14 @@
                 mobileMenu.style.left = "0";
                 mobileMenu.style.width = "100%";
                 mobileMenu.style.height = "100%";
-                mobileMenu.style.backgroundColor = "rgba(0, 0, 0, 0.9)"; 
+                mobileMenu.style.backgroundColor = "rgba(0, 0, 0, 0.9)";
                 mobileMenu.style.zIndex = "999";
                 mobileMenu.style.display = "flex";
                 mobileMenu.style.justifyContent = "center";
                 mobileMenu.style.alignItems = "center";
             }
-        });
-
-        document.addEventListener("click", function (event) {
-            if (mobileMenu.style.display === "block" && event.target !== menuToggle && !mobileMenu.contains(event.target)) {
-                mobileMenu.style.display = "none";
-            }
-        });
-        
+        }
     </script>
+    
 </body>
 </html>
