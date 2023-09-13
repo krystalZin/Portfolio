@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,33 +36,42 @@
     </nav>
     <div class="min-h-screen">
         <header class="bg-white text-black py-10">
-            <div class="container mx-auto header-container flex flex-col lg:flex-row items-center justify-center lg:text-left">
+            <div
+                class="container mx-auto header-container flex flex-col lg:flex-row items-center justify-center lg:text-left">
                 <div class="header-content px-5 text-center lg:text-left">
                     <h1 class="text-2xl font-semibold mb-3">Ngu Eain (Krystal) Zin</h1>
                     <p class="text-lg mb-2">Computer Science Student at Toronto Metropolitan University</p>
                     <p class="text-lg mb-1 flex justify-center sm:justify-start">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 384 512" class="mr-2"></svg>
-                          <style>svg{fill:#e492a5}</style>
-                          <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 384 512" class="mr-2">
+                            <style>
+                                svg {
+                                    fill: #e492a5
+                                }
+                            </style>
+                            <path
+                                d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
                         </svg>
                         Toronto, ON
-                      </p>
                 </div>
-                <img src="public/profile.jpg" alt="Profile Picture" class="profile-image py-8 ml-3 rounded-lg lg:max-w-[200px]" width="200px">
+                <img src="public/profile.jpg" alt="Profile Picture"
+                    class="profile-image py-8 ml-3 rounded-lg lg:max-w-[200px]" width="200px">
             </div>
         </header>
         <section class="container mx-auto py-10">
-            <h2 class="text-2xl font-semibold mb-6 text-center">Articles</h2>  
+            <h2 class="text-2xl font-semibold mb-6 text-center">Articles</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                <a href="https://www.github.com" target="_blank" class="bg-white rounded-lg hover:bg-stone-500 shadow-lg p-6">
+                <a href="https://www.github.com" target="_blank"
+                    class="bg-white rounded-lg hover:bg-stone-500 shadow-lg p-6">
                     <h3 class="text-xl font-semibold">Article 1</h3>
                     <p>Click to view Article</p>
                 </a>
-                <a href="https://www.facebook.com" target="_blank" class="bg-white rounded-lg hover:bg-stone-500 shadow-lg p-6">
+                <a href="https://www.facebook.com" target="_blank"
+                    class="bg-white rounded-lg hover:bg-stone-500 shadow-lg p-6">
                     <h3 class="text-xl font-semibold">Article 2</h3>
                     <p>Click to view Article</p>
                 </a>
-                <a href="https://www.linkedin.com" target="_blank" class="bg-white rounded-lg hover:bg-stone-500 shadow-lg p-6">
+                <a href="https://www.linkedin.com" target="_blank"
+                    class="bg-white rounded-lg hover:bg-stone-500 shadow-lg p-6">
                     <h3 class="text-xl font-semibold">Article 3</h3>
                     <p>Click to view Article</p>
                 </a>
@@ -77,9 +87,9 @@
     <script>
         const menuToggle = document.getElementById("menu-toggle");
         const mobileMenu = document.getElementById("mobile-menu");
-    
+
         menuToggle.addEventListener("click", toggleMobileMenu);
-    
+
         function toggleMobileMenu() {
             if (mobileMenu.style.display === "block") {
                 mobileMenu.style.display = "none";
@@ -98,6 +108,7 @@
             }
         }
     </script>
-    
+
 </body>
+
 </html>
