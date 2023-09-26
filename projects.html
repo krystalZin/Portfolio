@@ -3,9 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
+    <title>Krystal's Portfolio - Projects</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="public/logo.png" type="image/x-icon">
+    <link src="style.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    
+<body class="bg-[#E6D0CA] font-sans">
+
+    <nav class="bg-[#313035] p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-[#F38AA5] text-lg italic">Krystal</a>
+            <ul class="hidden desktop-menu lg:flex space-x-7">
+                <li><a href="about.html" class="text-white hover:text-[#F38AA5]">About Me</a></li>
+                <li><a href="projects.html" class="text-white hover:text-[#F38AA5]">Projects</a></li>
+                <li><a href="contact.html" class="text-white hover:text-[#F38AA5]">Contact</a></li>
+            </ul>
+            <div class="lg:hidden">
+                <div id="menu-wrapper" class="relative">
+                    <button id="menu-toggle" class="text-white hover:text-gray-700">☰</button>
+                    <div class="hidden h-auto flex pt-4" id="mobile-menu">
+                        <ul>
+                            <li><a href="about.html" class="text-white hover:text-[#F38AA5]">About Me</a></li>
+                            <li><a href="projects.html" class="text-white hover:text-[#F38AA5]">Projects</a></li>
+                            <li><a href="contact.html" class="text-white hover:text-[#F38AA5]">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto max-w-screen-xl py-10 px-4 md:px-0 ">
+        <h2 class="text-2xl font-semibold mb-6 text-center text-black">Projects</h2>
+        <div class="text-lg text-center text-gray-800">
+            <p>waggaga</p>
+        </div>
+    </div>
+
+    <footer class="bg-gray-900 text-white py-5">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 Krystal's Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        const toggleMobileMenu = () => {
+            if (mobileMenu.classList.contains("hidden")) {
+                mobileMenu.classList.remove("hidden");
+                menuToggle.classList.add("hidden");
+                mobileMenu.style.position = "fixed";
+                mobileMenu.style.top = "0";
+                mobileMenu.style.left = "0";
+                mobileMenu.style.width = "100%";
+                mobileMenu.style.height = "100%";
+                mobileMenu.style.backgroundColor = "rgba(0, 0, 0, 0.9)";
+                mobileMenu.style.zIndex = "999";
+                mobileMenu.style.display = "flex";
+                mobileMenu.style.justifyContent = "center";
+                mobileMenu.style.alignItems = "center";
+            } else {
+                mobileMenu.classList.add("hidden");
+                menuToggle.classList.remove("hidden");
+                mobileMenu.style.position = "";
+                mobileMenu.style.top = "";
+                mobileMenu.style.left = "";
+                mobileMenu.style.width = "";
+                mobileMenu.style.height = "";
+                mobileMenu.style.backgroundColor = "";
+                mobileMenu.style.zIndex = "";
+                mobileMenu.style.display = "";
+                mobileMenu.style.justifyContent = "";
+                mobileMenu.style.alignItems = "";
+            }
+        }
+
+        menuToggle.addEventListener("click", toggleMobileMenu);
+        mobileMenu.addEventListener("click", toggleMobileMenu);
+    </script>
+
 </body>
 </html>
