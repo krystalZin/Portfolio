@@ -6,35 +6,37 @@
     <title>Krystal's Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="public/logo.png" type="image/x-icon">
-    <link src="style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-[#E6D0CA] font-sans">
 
-    <nav class="bg-[#313035] p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-[#F38AA5] text-lg italic">Krystal</a>
-            <ul class="hidden desktop-menu lg:flex space-x-7">
-                <li><a href="about.html" class="text-white hover:text-[#F38AA5]">About Me</a></li>
-                <li><a href="projects.html" class="text-white hover:text-[#F38AA5]">Projects</a></li>
-                <li><a href="contact.html" class="text-white hover:text-[#F38AA5]">Contact</a></li>
-            </ul>
-            <div class="lg:hidden">
-                <div id="menu-wrapper" class="relative">
-                    <button id="menu-toggle" class="text-white hover:text-gray-700">☰</button>
-                    <div class="hidden h-auto flex pt-4" id="mobile-menu">
-                        <ul>
-                            <li><a href="about.html" class="text-white hover:text-[#F38AA5]">About Me</a></li>
-                            <li><a href="projects.html" class="text-white hover:text-[#F38AA5]">Projects</a></li>
-                            <li><a href="contact.html" class="text-white hover:text-[#F38AA5]">Contact</a></li>
-                        </ul>
+    <header>
+        <nav class="bg-[#313035] p-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <a href="index.html" class="text-[#F38AA5] text-lg italic">Krystal</a>
+                <ul class="hidden desktop-menu lg:flex space-x-7">
+                    <li><a href="about.html" class="text-white hover:text-[#F38AA5]">About Me</a></li>
+                    <li><a href="projects.html" class="text-white hover:text-[#F38AA5]">Projects</a></li>
+                    <li><a href="contact.html" class="text-white hover:text-[#F38AA5]">Contact</a></li>
+                </ul>
+                <div class="lg:hidden">
+                    <div id="menu-wrapper" class="relative">
+                        <button id="menu-toggle" class="text-white hover:text-gray-700">☰</button>
+                        <div class="hidden h-auto flex pt-4" id="mobile-menu">
+                            <ul>
+                                <li><a href="about.html" class="text-white hover:text-[#F38AA5]">About Me</a></li>
+                                <li><a href="projects.html" class="text-white hover:text-[#F38AA5]">Projects</a></li>
+                                <li><a href="contact.html" class="text-white hover:text-[#F38AA5]">Contact</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <header class="bg-[#F4EEED] text-black py-10">
+    <div class="bg-[#F4EEED] text-black py-10">
         <div class="container mx-auto header-container flex flex-col lg:flex-row items-center justify-center lg:text-left">
             <div class="header-content px-5 text-center lg:text-left">
                 <h1 class="text-2xl font-semibold mb-3">Ngu Eain (Krystal) Zin</h1>
@@ -54,34 +56,14 @@
             </div>
             <img src="public/krystal.png" alt="Profile Picture" class="profile-image lg:max-w-[350px]" width="350px">
         </div>
-    </header>
+    <div>
 
-    <div class="container mx-auto max-w-screen-xl py-10 px-4 md:px-0 ">
-        <h2 class="text-2xl font-semibold mb-6 text-center text-black">Articles</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            <a href="https://www.github.com" target="_blank"
-                class="bg-white rounded-lg hover:bg-stone-500 shadow-lg p-6">
-                <h3 class="text-xl font-semibold">Article 1</h3>
-                <p>Click to view Article</p>
-            </a>
-            <a href="https://www.facebook.com" target="_blank"
-                class="bg-white rounded-lg hover:bg-stone-500 shadow-lg p-6">
-                <h3 class="text-xl font-semibold">Article 2</h3>
-                <p>Click to view Article</p>
-            </a>
-            <a href="https://www.linkedin.com" target="_blank"
-                class="bg-white rounded-lg hover:bg-stone-500 shadow-lg p-6">
-                <h3 class="text-xl font-semibold">Article 3</h3>
-                <p>Click to view Article</p>
-            </a>
-        </div>
-    </div>        
-
-    <footer class="bg-gray-900 text-white py-5">
+    <footer class="bg-gray-900 text-white py-5 sticky-footer">
         <div class="container mx-auto text-center">
             <p>&copy; 2023 Krystal's Website. All rights reserved.</p>
         </div>
     </footer>
+
 
     <script>
         const menuToggle = document.getElementById("menu-toggle");
